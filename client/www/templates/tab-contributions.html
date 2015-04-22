@@ -1,0 +1,20 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-plus" ng-click="modal.show()"></button>
+   </ion-nav-buttons>
+  <ion-content>
+  <div class="list card" ng-repeat="contribution in contributions">
+  
+  <div class="item item-avatar">
+    <img ng-src="img/ionic.png">
+    <h2>{{contribution.contributor.name}}</h2>
+    <p>{{contribution.date | date: 'dd MMM, yyyy'}}</p>
+  </div>
+
+  <div class="item item-body">
+  	<p class="money-text">{{contribution.value | currency}}</p>
+  </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>
